@@ -14,7 +14,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 })
 let namor: Sprite = null
 let shuri: Sprite = null
-game.showLongText("When game begins, press the ARROW KEYS to move Shuri, Okoye and Riri. If Namor catches you, you will lose points! ", DialogLayout.Full)
+game.showLongText("press w,a,s,d to move shuri", DialogLayout.Full)
 scene.setBackgroundImage(assets.image`boston-bridge`)
 shuri = sprites.create(assets.image`shuri`, SpriteKind.Player)
 controller.moveSprite(shuri)
