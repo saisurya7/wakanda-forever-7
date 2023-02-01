@@ -2,15 +2,15 @@ sprites.onOverlap(SpriteKind.Guard, SpriteKind.Enemy, function (sprite, otherSpr
     info.changeScoreBy(1)
     namor.setPosition(148, 2)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite2, otherSprite2) {
+    info.changeLifeBy(-1)
+    namor.setPosition(148, 2)
+})
 info.onScore(20, function () {
     namor.destroy()
     scene.setBackgroundImage(assets.image`boston-bridge`)
     effects.confetti.startScreenEffect()
     shuri.sayText(":)", 2000, false)
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    info.changeLifeBy(-1)
-    namor.setPosition(148, 2)
 })
 let namor: Sprite = null
 let shuri: Sprite = null
